@@ -1,0 +1,15 @@
+{
+  "name": "flextudio",
+  "owner": { "name": "Flextudio (YoungLimWon SoftLab)", "url": "https://flextudio.com" },
+  "metadata": { "description": "Flextudio low-code development helpers for Claude" },
+  "plugins": [
+    {
+      "name": "flextudio",
+      "source": "./plugins/flextudio",
+      "description": "플렉스튜디오(Flextudio) 로우코드 개발 도우미: Studio 시나리오·이벤트·스크립트, K-System SP·FlexAPI, FlexSQL, 배포·설치·출력, 신규 기능(플립프론트·플립백) 질문과 오류를 검증된 규칙으로 안내",
+      "version": "0.5.0",
+      "category": "development",
+      "keywords": ["flextudio", "플렉스튜디오", "low-code", "로우코드", "k-system", "erp", "flexapi", "flexsql", "영림원"]
+    }
+  ]
+}
