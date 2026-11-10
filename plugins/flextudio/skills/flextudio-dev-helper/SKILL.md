@@ -1,9 +1,9 @@
 ---
 name: flextudio-dev-helper
-description: 플렉스튜디오(Flextudio) 로우코드 개발 도우미. Studio 시나리오·이벤트·스크립트·서비스·K-System SP·FlexSQL·배포·설치·출력, 신규 기능(플립프론트·플립백) 질문과 오류를 검증된 규칙으로 안내한다. 화면 만들기, SP 연결, 오류 해결을 물을 때 쓴다.
+description: 플렉스튜디오(Flextudio) 로우코드 개발 도우미. Studio 시나리오·이벤트·스크립트·서비스·K-System 연동 서비스(Flex-K)·SP·FlexSQL·배포·설치·출력, 신규 기능(플립프론트·플립백) 질문과 오류를 검증된 규칙으로 안내한다. 화면 만들기, SP 연결, 오류 해결을 물을 때 쓴다.
 metadata:
-  version: "0.5.0"
-  updated: "2026-11-06"
+  version: "0.5.2"
+  updated: "2026-11-10"
 ---
 
 # 플렉스튜디오 개발 도우미
@@ -21,7 +21,7 @@ metadata:
 4. 라이선스·계약·가격·장애·설치 승인·K-SMART 표준 화면 문제는 플렉스튜디오 담당자에게 넘기세요. 이때 문의 양식(request-form.md)의 항목을 답 안에 직접 적어 주세요.
 5. 답에 이 스킬의 파일 이름이나 경로(references/…, assets/…)를 쓰지 마세요. 질문자에게는 보이지 않는 파일입니다. 필요한 내용은 답 안에 옮겨 적으세요.
 6. 비밀번호·API 키·접속 정보 실제 값을 답에 쓰지 마세요. `<API 키>` 처럼 자리만 두세요.
-7. 질문자가 쓰는 연동 방식(K-System(Flex-K), FlexSQL, API 연동)에 따라 답이 다르면 조건을 나눠 쓰세요.
+7. 질문자가 쓰는 연동 방식(K-System 연동 서비스(Flex-K), FlexSQL, API 연동)에 따라 답이 다르면 조건을 나눠 쓰세요.
 
 ## 2. 꼭 기억할 플랫폼 규칙
 
@@ -58,12 +58,12 @@ metadata:
 | 화면·컨트롤·그룹·데이터연결·시트·컬렉션 | [references/screen-and-data.md](references/screen-and-data.md) |
 | 어떤 컨트롤을 쓰나, 컨트롤 속성과 상태 | [references/controls-catalog.md](references/controls-catalog.md) |
 | 이벤트·액션·스크립트·함수·스텝 이동·서브시나리오 | [references/events-and-script.md](references/events-and-script.md) |
-| K-System(Flex-K) 연동, SP 작성, 서비스 설정 | [references/service-ksystem-sp.md](references/service-ksystem-sp.md) |
+| K-System 연동 서비스(Flex-K), SP 작성, 서비스 설정 | [references/service-ksystem-sp.md](references/service-ksystem-sp.md) |
 | FlexSQL·FlexDB·자동조회·API 연동·파일·구글 시트 | [references/flexsql-and-services.md](references/flexsql-and-services.md) |
-| 워크스페이스·앱·테넌트·배포·버전·권한·Flex-K 설치·모바일·PDA·출력 | [references/build-and-deploy.md](references/build-and-deploy.md) |
+| 워크스페이스·앱·테넌트·배포·버전·권한·연동 서비스(Flex-K) 설치·모바일·PDA·출력 | [references/build-and-deploy.md](references/build-and-deploy.md) |
 | 콘솔 메뉴, 배포내역, 고객관리, 요금제별 기능, 디버거 탭, 자동조회·구글 시트·API 연동 화면 | [references/console-and-tools.md](references/console-and-tools.md) |
 | 오류 메시지, 값이 안 나옴, 저장 안 됨, 반영 안 됨 | [references/troubleshooting.md](references/troubleshooting.md), [references/common-mistakes.md](references/common-mistakes.md) |
-| 방화벽·출발지 IP·포트, Flex-K 설치와 연결, HTTPS 인증서, 사용자 동기화, 사내망 차단, 로그인·세션 | [references/network-and-install.md](references/network-and-install.md) |
+| 방화벽·출발지 IP·포트, 연동 서비스(Flex-K) 설치와 연결, HTTPS 인증서, 사용자 동기화, 사내망 차단, 로그인·세션 | [references/network-and-install.md](references/network-and-install.md) |
 | 바로 출력·OZ 리포트·프린터, PDA 스캐너·카메라 스캔, 모바일 앱 빌드·구형 단말 | [references/devices-and-printing.md](references/devices-and-printing.md) |
 | Firestore, 스텝 버튼 이동 타입, 권한키 관리 같은 공식 문서 세부 | [references/official-docs-extra.md](references/official-docs-extra.md) |
 | 신규 기능 플립프론트(AI 채팅 화면 만들기)·플립백(서버 플로우) | [references/flip-new-features.md](references/flip-new-features.md) |

@@ -9,7 +9,7 @@
 4. 데이터 용어
 5. 이벤트와 스크립트 용어
 6. 서비스와 연동 용어
-7. K-System(Flex-K) SP 용어
+7. K-System 연동 서비스 SP 용어
 8. 배포와 운영 용어
 9. Studio 화면 글자 대응표
 10. 쓰지 말아야 할 말
@@ -129,13 +129,13 @@ Studio 화면에 보이는 글자는 [대괄호]로 씁니다.
 | Secret Key | API 연동 모듈에 비밀값(API 키 등)을 등록하는 자리입니다. 모듈 안에서 `{=키}` 로 꺼내 씁니다. |
 | Event Config Key | 시나리오에서 API 연동 모듈로 넘기는 값의 이름입니다. |
 | 외부 DB | 테넌트 시스템 정보에 등록해 FlexSQL 로 쓰는 고객사 DB 입니다. |
-| K-System | 플렉스튜디오와 연동하는 ERP 입니다. 첫 등장은 "K-System(Flex-K) 연동"으로 씁니다. |
-| Flex-K | 고객사 ERP 앱 서버(IIS)에 설치하는 연동 프로그램입니다. K-System 과 연결하려면 먼저 설치돼 있어야 합니다. |
+| K-System | 플렉스튜디오와 연동하는 ERP 입니다. 첫 등장은 "K-System 연동 서비스(Flex-K)", 그다음부터 "연동 서비스"로 씁니다. |
+| K-System 연동 서비스(Flex-K) | 고객사 ERP 앱 서버(IIS)에 설치하는 연동 프로그램입니다. Flex-K 는 이 프로그램의 제품 이름이고, 답에서는 괄호로만 붙입니다. K-System 과 연결하려면 먼저 설치돼 있어야 합니다. |
 | FlexAPI | K-System 연동 서비스의 모듈 이름입니다. 서비스 종류는 `ksystem` 입니다. |
-| 시스템 정보 4개 항목 | K-System 연동에 넣는 Oper dsn, Bis dsn, CompanySeq, FlexK API URL 입니다. |
+| 시스템 정보 4개 항목 | K-System 연동에 넣는 Oper dsn, Bis dsn, CompanySeq, FlexK API URL 입니다(화면 라벨 그대로). |
 | dsn | DB 이름이 아니라 ERP 서버 쪽 접속 별칭입니다. 어느 물리 DB 인지는 ERP 담당자에게 확인하세요. |
 
-## 7. K-System(Flex-K) SP 용어
+## 7. K-System 연동 서비스 SP 용어
 
 서비스 한 번의 흐름은 이 한 줄로 설명합니다.
 이벤트 → 서비스 → 보내는 데이터가 `#BIZ_IN_DataBlock1` 에 들어감 → SP 실행 → SP 가 `#BIZ_OUT_DataBlock1` 에 결과 기록 → 받는 데이터가 카테고리에 반영 → 화면

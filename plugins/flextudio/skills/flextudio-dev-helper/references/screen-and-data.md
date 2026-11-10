@@ -136,7 +136,7 @@ if (!target || !target.<키>) {
 ## 6. 행 상태(added·updated·deleted)
 
 섹터에 붙는 상태는 added·updated·deleted 세 가지뿐입니다.
-K-System(Flex-K) 저장 SP 에는 이 상태가 WorkingTag(A·U·D)로 전달됩니다.
+K-System 연동 서비스(Flex-K)의 저장 SP 에는 이 상태가 WorkingTag(A·U·D)로 전달됩니다.
 
 | 행을 만든 방법 | 상태 | WorkingTag |
 |---|---|---|

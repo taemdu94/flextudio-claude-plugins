@@ -20,7 +20,7 @@
 |---|---|---|
 | 앱 이름 | `<앱 이름>` | 거래처 관리 |
 | 앱 종류 | 초대기반앱 또는 공개앱 | 초대기반앱 |
-| 데이터 연동 | K-System(Flex-K), FlexSQL, 자동조회, API 연동 중 | K-System(Flex-K) |
+| 데이터 연동 | K-System 연동 서비스(Flex-K), FlexSQL, 자동조회, API 연동 중 | K-System 연동 서비스 |
 | 이름 접두어 | `<접두어>` (테이블과 SP 이름을 다른 앱과 구분) | `ABC` |
 
 ## 2. 화면 목록
@@ -81,8 +81,8 @@ R조회에서는 SELECT 의 별칭(`AS CustSeq`)이 결과 컬럼이 됩니다.
 
 | 서비스 이름 | 종류 | SP 또는 쿼리 | 조회 방식 |
 |---|---|---|---|
-| `Query_CustList` | K-System(Flex-K) | `<접두어>_SFlexCustListQuery` | Q조회 |
-| `Save_CustMaster` | K-System(Flex-K) | `<접두어>_SFlexCustSave` | 저장 |
+| `Query_CustList` | K-System 연동 서비스 | `<접두어>_SFlexCustListQuery` | Q조회 |
+| `Save_CustMaster` | K-System 연동 서비스 | `<접두어>_SFlexCustSave` | 저장 |
 
 조회 방식은 두 가지입니다.
 
@@ -106,7 +106,7 @@ R조회에서는 SELECT 의 별칭(`AS CustSeq`)이 결과 컬럼이 됩니다.
 
 지킬 규칙입니다.
 
-1. K-System(Flex-K) SP 를 부르는 서비스는 [사용자 데이터]에 CompanySeq, LanguageSeq, UserSeq 를 넣으세요.
+1. K-System 연동 서비스로 SP 를 부르는 서비스는 [사용자 데이터]에 CompanySeq, LanguageSeq, UserSeq 를 넣으세요.
 2. 같은 키를 [사용자 데이터]와 카테고리 양쪽으로 보내지 마세요.
 3. 받을 블록이 N 개면 보내는 블록도 N 개로 맞추세요.
    입력이 필요 없는 조회도 [보내는 데이터]를 1개 붙이세요.
@@ -122,7 +122,7 @@ R조회에서는 SELECT 의 별칭(`AS CustSeq`)이 결과 컬럼이 됩니다.
 
 액션 번호는 Studio 화면과 같게 1부터 쓰세요.
 
-## 8. SP 이름 계약: K-System(Flex-K) 연동일 때
+## 8. SP 이름 계약: K-System 연동 서비스일 때
 
 | SP | 읽는 임시 테이블 | 결과를 내는 곳 | 행 구분 |
 |---|---|---|---|

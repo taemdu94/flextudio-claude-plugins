@@ -6,7 +6,7 @@
 
 ## 1. 전체 흐름
 
-K-System(Flex-K) 연동은 화면 데이터를 ERP DB 의 SP 로 보내고 결과를 다시 화면으로 받는 구조입니다.
+K-System 연동 서비스(Flex-K)는 화면 데이터를 ERP DB 의 SP 로 보내고 결과를 다시 화면으로 받는 구조입니다.
 화면 이벤트 → 서비스(ksystem, FlexAPI) → [보내는 데이터]가 #BIZ_IN_DataBlock{n} 의 행이 됨 → SP 실행 → SP 가 #BIZ_OUT_DataBlock{n} 에 결과를 씀 → [받는 데이터]로 카테고리에 반영 → 화면
 데이터가 이미 ERP 에 있으면 K-System(FlexAPI) 서비스를 쓰세요.
 ERP 밖의 새 데이터만 다루면 FlexSQL 이나 FlexDB 를 검토하세요.
@@ -16,7 +16,7 @@ ERP 밖의 새 데이터만 다루면 FlexSQL 이나 FlexDB 를 검토하세요.
 SP 를 부르기 전에 테넌트의 K-System 시스템 정보가 채워져 있어야 합니다.
 1. 콘솔에서 테넌트 회사 정보의 [사용할 System]에 K-System 이 저장돼 있는지 보세요.
 2. [시스템 정보]의 K-System 탭을 여세요.
-3. Oper dsn, Bis dsn, CompanySeq, FlexK API URL 네 값이 있는지 보세요.
+3. Oper dsn, Bis dsn, CompanySeq, FlexK API URL 네 값(화면 라벨 그대로)이 있는지 보세요.
 
 값은 K-System 연동 설치를 마친 뒤 받은 안내의 값을 그대로 넣으세요.
 dsn 은 DB 이름이 아니라 서버 쪽 접속 이름입니다.
@@ -136,19 +136,19 @@ R조회는 SP 의 SELECT 결과를 그대로 돌려주므로 결과 키를 등�
 
 [Etc] 탭 Collections 에 등록한 타입이 값 모양보다 우선합니다.
 
-| 등록 타입 | 임시 테이블 컬럼 | 값이 들어가는 모양 |
-|---|---|---|
-| string, size 1~4000 | NVARCHAR(size) | N'값', 작은따옴표는 두 번 겹칩니다 |
-| string, size 비움 또는 4000 초과 | NVARCHAR(MAX) | 위와 같습니다 |
-| int | INT | 숫자 그대로 |
-| double | DECIMAL(19,5) | 숫자 그대로 |
+| 등록 타입 | 임시 테이블 컬럼 |
+|---|---|
+| string, size 1~4000 | NVARCHAR(size) |
+| string, size 비움 또는 4000 초과 | NVARCHAR(MAX) |
+| int | INT |
+| double | DECIMAL(19,5) |
 
 타입을 비우면 문자열로 처리돼 Seq 키도 NVARCHAR(MAX) 가 됩니다.
-값이 없으면 NULL 로 들어갑니다.
+값이 없으면 NULL 로 들어갑니다. 작은따옴표가 든 문자열 값도 그대로 전달됩니다.
 숫자 타입 키에 빈 문자열이 오면 NULL 이 아니라 0 이 들어갑니다.
 "입력 안 함"과 0 을 구분해야 하면 그 키를 string 으로 등록하고 SP 에서 '' 와 비교하세요.
 size 는 SP 가 쓰는 컬럼 타입 길이와 맞추는 것이 안전합니다.
-사진을 Base64 문자열로 키에 담아 보내면 값이 SQL 문장에 그대로 들어가 요청이 커지고, 약 4MB 를 넘으면 실패할 수 있습니다.
+사진을 Base64 문자열로 키에 담아 보내면 요청이 커져서, 약 4MB 를 넘으면 실패할 수 있습니다.
 사진은 파일 서비스로 올리고 SP 에는 첨부 번호만 보내세요.
 
 ## 8. SP 작성 규칙
